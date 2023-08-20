@@ -1,0 +1,83 @@
+.user-card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-bottom: 30px;
+    border: 1px solid rgb(6, 138, 246);
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgb(38, 38, 38);
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.user-card:hover {
+    box-shadow: 0 0 15px rgb(38, 38, 38);
+}
+
+.user-card:nth-of-type(odd):hover {
+    transform: rotate3d(1, 1, 1, 2deg);
+}
+
+.user-card:nth-of-type(even):hover {
+    transform: rotate3d(1, 1, 1, -2deg);
+}
+
+.user-card .user-card-header {
+    width: 100%;
+    height: 20vh;
+    padding: 10px 0;
+    background-image: url('https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?w=2000&t=st=1692302982~exp=1692303582~hmac=6e0dbfc020db4567499fd4081f80ddf6bc07182d209fc253c7f5fba4c057a5e3');
+    border-radius: 15px 15px 0 0;
+}
+
+.user-card .user-card-header img {
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(38, 38, 38);
+    transition: .3s ease-out;
+    z-index: 1;
+}
+
+.user-card .user-card-body {
+    padding: 30px 0 0;
+}
+
+.user-card .user-card-body .user-name,
+.user-list .user-card-footer {
+    text-align: center;
+}
+
+.user-card .user-card-body .user-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.user-list .user-card-footer {
+    padding: 10px 0 20px;
+}
+
+@media(max-width:898px) {
+    .user-card {
+        width: 40%;
+    }
+}
+
+@media(max-width:768px) {
+    .user-card .user-card-header {
+        height: 15vh;
+    }
+
+    .user-card .user-card-header img {
+        width: 60%;
+    }
+
+    .user-card .user-card-body .user-name {
+        font-size: 24px;
+    }
+
+    .user-card .user-card-footer .user-email {
+        font-size: 12px;
+    }
+}
